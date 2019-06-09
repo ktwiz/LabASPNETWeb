@@ -1,19 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="LabWebAppAspNet" Class="DBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="WebSettings" ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=LabWebAppAspNet;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="LabWebAppAspNetConnectionString" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.wpNews" Member="wpNews">
-    <Type Name="wpNew">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="title" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-      <Column Name="content" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="tags" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
-      <Column Name="usr_create" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Column Name="createdt" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="lastupdt" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="activeyn" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="homepageyn" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Association Name="wpUser_wpNew" Member="wpUser" ThisKey="usr_create" OtherKey="username" Type="wpUser" IsForeignKey="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.wpUsers" Member="wpUsers">
     <Type Name="wpUser">
       <Column Name="username" Type="System.String" DbType="VarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -25,6 +11,21 @@
       <Column Name="lastlogindt" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="pwd" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
       <Association Name="wpUser_wpNew" Member="wpNews" ThisKey="username" OtherKey="usr_create" Type="wpNew" />
+    </Type>
+  </Table>
+  <Table Name="dbo.wpNews" Member="wpNews">
+    <Type Name="wpNew">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="content" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="tags" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="usr_create" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="createdt" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="lastupdt" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="activeyn" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="homepageyn" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="shortdesc" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Association Name="wpUser_wpNew" Member="wpUser" ThisKey="usr_create" OtherKey="username" Type="wpUser" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

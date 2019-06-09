@@ -2,23 +2,23 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DB">
   <DataContextMoniker Name="/DBDataContext" />
   <nestedChildShapes>
-    <classShape Id="120496cd-5cf2-48bb-9b41-5c2b3c8e17dc" absoluteBounds="3.5, 1, 2, 2.5401025390625005">
-      <DataClassMoniker Name="/DBDataContext/wpNew" />
-      <nestedChildShapes>
-        <elementListCompartment Id="2274ed59-ed44-4e3f-aab3-fa4da5a92511" absoluteBounds="3.515, 1.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
     <classShape Id="425d58a3-01f1-4bb2-bfac-0649765233ac" absoluteBounds="0.75, 1, 2, 2.3478011067708335">
       <DataClassMoniker Name="/DBDataContext/wpUser" />
       <nestedChildShapes>
         <elementListCompartment Id="bde15166-14b0-4bab-b0df-0a91cf11890d" absoluteBounds="0.765, 1.46, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(2.75 : 2.17390055338542); (3.5 : 2.17390055338542)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <classShape Id="1c2044e2-0dd4-45d7-9936-edd07cae0d86" absoluteBounds="3.375, 0.875, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/DBDataContext/wpNew" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ac986d00-0715-4e60-bb85-ab2717ec4000" absoluteBounds="3.3899999999999997, 1.335, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 2.17390055338542); (3.375 : 2.17390055338542)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/DBDataContext/wpUser/wpUser_wpNew" />
       <nodes>
         <classShapeMoniker Id="425d58a3-01f1-4bb2-bfac-0649765233ac" />
-        <classShapeMoniker Id="120496cd-5cf2-48bb-9b41-5c2b3c8e17dc" />
+        <classShapeMoniker Id="1c2044e2-0dd4-45d7-9936-edd07cae0d86" />
       </nodes>
     </associationConnector>
   </nestedChildShapes>
