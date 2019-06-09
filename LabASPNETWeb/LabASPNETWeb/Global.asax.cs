@@ -1,5 +1,7 @@
-﻿using System;
+﻿using LabASPNETWeb.Models.Global;
+using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -13,6 +15,9 @@ namespace LabASPNETWeb
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+
+            //! Load connection string to AppStoreData
+            AppStoreData.CONN_STR = ConfigurationManager.ConnectionStrings[AppStoreData.PAR.CF_CONNSTRNAME].ConnectionString;
         }
     }
 }
