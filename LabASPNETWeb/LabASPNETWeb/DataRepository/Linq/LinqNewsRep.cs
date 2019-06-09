@@ -24,22 +24,13 @@ namespace LabASPNETWeb.DataRepository.Linq
         {
             try
             {
-                if (this._status_cd.Equals(ConnectionState.Open))
-                {
-                    return this._context.wpNews.Where(x => x.activeyn.Equals(true)).ToList();
-                }
-                else
-                {
-                    AppStoreData.APP_LOGGER.Error(typeof(LinqNewsRep));
-                    AppStoreData.APP_LOGGER.Error("CONN N/A");
-                    return new List<wpNew>();
-                }
+                return this._context.wpNews.Where(x => x.activeyn.Equals(true)).ToList();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 AppStoreData.APP_LOGGER.Error(typeof(LinqNewsRep));
                 AppStoreData.APP_LOGGER.Error(ex);
-                return new List<wpNew>();
+                return AppStoreData.EMPTY_NEWS;
             }
         }
 
@@ -47,37 +38,27 @@ namespace LabASPNETWeb.DataRepository.Linq
         {
             try
             {
-                if (this._status_cd.Equals(ConnectionState.Open))
-                {
-                    return this._context.wpNews.Where(x => x.activeyn.Equals(true) && x.usr_create.Equals(user_posted)).ToList();
-                }
-                else
-                {
-                    AppStoreData.APP_LOGGER.Error(typeof(LinqNewsRep));
-                    AppStoreData.APP_LOGGER.Error("CONN N/A");
-                    return new List<wpNew>();
-                }
+                return this._context.wpNews.Where(x => x.activeyn.Equals(true) && x.usr_create.Equals(user_posted)).ToList();                
             }
             catch (Exception ex)
             {
                 AppStoreData.APP_LOGGER.Error(typeof(LinqNewsRep));
                 AppStoreData.APP_LOGGER.Error(ex);
-                return new List<wpNew>();
+                return AppStoreData.EMPTY_NEWS;
             }
         }
 
         public List<wpNew> getNews(bool isHomepage)
         {
             try
-            {                
-               return this._context.wpNews.Where(x => x.activeyn.Equals(true) && x.homepageyn.Equals(true)).ToList();
-               
+            {
+                return this._context.wpNews.Where(x => x.activeyn.Equals(true) && x.homepageyn.Equals(true)).ToList();
             }
             catch (Exception ex)
             {
                 AppStoreData.APP_LOGGER.Error(typeof(LinqNewsRep));
                 AppStoreData.APP_LOGGER.Error(ex);
-                return new List<wpNew>();
+                return AppStoreData.EMPTY_NEWS;
             }
         }
 
@@ -85,17 +66,7 @@ namespace LabASPNETWeb.DataRepository.Linq
         {
             try
             {
-                if (this._status_cd.Equals(ConnectionState.Open))
-                {
-                    return this._context.wpNews.Where(x => x.activeyn.Equals(true) && x.id.Equals(id)).SingleOrDefault();
-                }
-                else
-                {
-                    AppStoreData.APP_LOGGER.Error(typeof(LinqNewsRep));
-                    AppStoreData.APP_LOGGER.Error("CONN N/A");
-                    //? Expect to return non-null object to application, to count on NULLPOINTEREXCEPTION
-                    return new wpNew { id = -1 };
-                }
+                return this._context.wpNews.Where(x => x.activeyn.Equals(true) && x.id.Equals(id)).SingleOrDefault();                
             }
             catch (Exception ex)
             {

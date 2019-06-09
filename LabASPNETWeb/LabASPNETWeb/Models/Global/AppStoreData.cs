@@ -15,6 +15,7 @@ namespace LabASPNETWeb.Models.Global
         public static ILog APP_LOGGER;
 
         public static wpNew NULL_NEWS = new wpNew { id = -1 };
+        public static List<wpNew> EMPTY_NEWS = new List<wpNew>();
 
 
         public class PAR

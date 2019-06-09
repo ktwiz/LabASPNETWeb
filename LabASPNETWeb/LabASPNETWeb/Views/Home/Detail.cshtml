@@ -1,0 +1,23 @@
+﻿@using LabASPNETWeb.DataRepository.Linq
+@{
+    ViewBag.Title = "News Detail";
+    Layout = "~/Views/shared/_mainLayout.cshtml";
+    wpNew news = ViewBag.news;
+}
+
+<!-- Post Content Column -->
+<div class="col-lg-8">
+    <h1 class="my-4">
+        @news.title
+    </h1>
+    <p class="lead">
+        by
+        <a href="#">[@news.usr_create] - @news.wpUser.name</a>
+    </p>
+    <hr>
+    <!-- Date/Time -->
+    <p>Posted on @String.Format("{0:dd/MM/yyyy HH:mm:ss}", @news.createdt)</p>
+    <hr>
+    <!-- Post Content -->
+    @news.content
+</div>

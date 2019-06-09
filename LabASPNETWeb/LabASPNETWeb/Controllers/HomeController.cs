@@ -23,5 +23,14 @@ namespace LabASPNETWeb.Controllers
             ViewBag.newss = newss;
             return View();
         }
+
+        [HttpGet]
+        [Route("Home/Detail/{id}")]
+        public ActionResult Detail(int id)
+        {
+            wpNew n = newsRep.getNewsDetail(id);
+            ViewBag.news = n;
+            return View();
+        }
     }
 }
