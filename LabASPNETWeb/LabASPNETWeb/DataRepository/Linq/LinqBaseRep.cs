@@ -26,6 +26,8 @@ namespace LabASPNETWeb.DataRepository.Linq
             }
             catch (Exception ex)
             {
+                AppStoreData.APP_LOGGER.Error("LingBaseRep Error");
+                AppStoreData.APP_LOGGER.Error(ex);
                 return -1;
             }
         }

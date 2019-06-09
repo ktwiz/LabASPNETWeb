@@ -1,4 +1,5 @@
 ﻿using LabASPNETWeb.Models.Global;
+using log4net;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -16,7 +17,12 @@ namespace LabASPNETWeb
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
 
+            //! Config log4net
+            log4net.Config.XmlConfigurator.Configure();
+            AppStoreData.APP_LOGGER = LogManager.GetLogger(AppStoreData.PAR.LOGNAME_APP);
+
             //! Load connection string to AppStoreData
+            //? Check if connection string exists or not in web/config
             AppStoreData.CONN_STR = ConfigurationManager.ConnectionStrings[AppStoreData.PAR.CF_CONNSTRNAME].ConnectionString;
         }
     }

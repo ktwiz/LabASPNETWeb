@@ -44,3 +44,5 @@ C:\Users\TuanDH\Source\Repos\LabASPNETWeb\LabASPNETWeb\LabASPNETWeb\bin\System.W
 C:\Users\TuanDH\Source\Repos\LabASPNETWeb\LabASPNETWeb\LabASPNETWeb\obj\Debug\LabASPNETWeb.csprojResolveAssemblyReference.cache
 C:\Users\TuanDH\Source\Repos\LabASPNETWeb\LabASPNETWeb\LabASPNETWeb\obj\Debug\LabASPNETWeb.dll
 C:\Users\TuanDH\Source\Repos\LabASPNETWeb\LabASPNETWeb\LabASPNETWeb\obj\Debug\LabASPNETWeb.pdb
+C:\Users\TuanDH\Source\Repos\LabASPNETWeb\LabASPNETWeb\LabASPNETWeb\bin\log4net.dll
+C:\Users\TuanDH\Source\Repos\LabASPNETWeb\LabASPNETWeb\LabASPNETWeb\bin\log4net.xml

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LabASPNETWeb.Models.Global;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,6 +12,7 @@ namespace LabASPNETWeb.Controllers
         //! GET: Home
         public ActionResult Index()
         {
+            //x AppStoreData.APP_LOGGER.Info("Enter: Home/Index");
             return View();
         }
     }
