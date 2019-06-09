@@ -144,6 +144,9 @@
     <Content Include="Assets\vendor\jquery\jquery.slim.min.js" />
     <Content Include="db_script.sql" />
     <Content Include="Global.asax" />
+    <Content Include="Js\App.js" />
+    <Content Include="Js\main.js" />
+    <Content Include="Js\State.js" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Web.config" />
@@ -151,6 +154,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SPAHomeController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="DataRepository\IConnect.cs" />
     <Compile Include="DataRepository\INews.cs" />
@@ -201,11 +205,12 @@
     <Content Include="Assets\vendor\jquery\jquery.min.map" />
     <Content Include="Assets\vendor\jquery\jquery.slim.min.map" />
     <Content Include="Views\shared\_mainLayout.cshtml" />
-    <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Detail.cshtml" />
     <Content Include="Views\User\LoginFormPartial.cshtml" />
     <Content Include="Views\User\UserInformationPartial.cshtml" />
+    <Content Include="package.json" />
+    <Content Include="Views\SPAHome\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
