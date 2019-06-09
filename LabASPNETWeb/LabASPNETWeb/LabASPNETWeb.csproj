@@ -151,8 +151,10 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="DataRepository\IConnect.cs" />
     <Compile Include="DataRepository\INews.cs" />
+    <Compile Include="DataRepository\IUser.cs" />
     <Compile Include="DataRepository\Linq\DB.cs">
       <DependentUpon>DB.dbml</DependentUpon>
     </Compile>
@@ -163,10 +165,13 @@
     </Compile>
     <Compile Include="DataRepository\Linq\LinqBaseRep.cs" />
     <Compile Include="DataRepository\Linq\LinqNewsRep.cs" />
+    <Compile Include="DataRepository\Linq\LinqUserRep.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Form\LoginForm.cs" />
     <Compile Include="Models\Global\AppStoreData.cs" />
+    <Compile Include="Models\Global\EncrytionFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -199,6 +204,8 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Detail.cshtml" />
+    <Content Include="Views\User\LoginFormPartial.cshtml" />
+    <Content Include="Views\User\UserInformationPartial.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

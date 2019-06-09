@@ -1,0 +1,38 @@
+﻿@using LabASPNETWeb.Models.Form
+@model LoginForm
+@{ 
+    string mgs_authfail = ViewBag.MGS_AUTHFAIL_VAL;
+}
+<!-- Login Widget -->
+<div class="card card-login mx-auto mt-5">
+    <div class="card-header">Login</div>
+    <div class="card-body">
+        
+        @using (Html.BeginForm("Login", "User", FormMethod.Post))
+        {
+            @Html.ValidationSummary(true);
+            <div class="alert-info">
+                @mgs_authfail
+            </div>
+
+            <div class="form-group">
+                <div class="form-label-group">          
+                    @Html.LabelFor(model => model.Username, new { })          
+                    @Html.TextBoxFor(model => model.Username, new { @class = "form-control", @required = "required", @autofocus = "autofocus", @placeholder = "username"})
+                    
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-label-group">     
+                    @Html.LabelFor(model => model.Password, new { })               
+                    @Html.PasswordFor(model => model.Password, new { @class = "form-control", @required = "required", @placeholder = "Password" })                    
+                </div>
+            </div>            
+            <input type="submit" class="btn btn-primary btn-block" value="Login" />            
+        }
+        <div class="text-center">
+            <a class="d-block small mt-3" href="register.html">Register an Account</a>
+            <a class="d-block small" href="forgot-password.html">Forgot Password?</a>
+        </div>
+    </div>
+</div>

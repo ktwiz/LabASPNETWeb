@@ -1,0 +1,16 @@
+﻿@{ 
+    wpUser userLogin = ViewBag.userLogin;
+}
+<div class="card card-login mx-auto mt-5">
+    <div class="card-header">User Information</div>
+    <div class="card-body">
+        <div class="form-group">
+            <div class="form-label-group">
+                Hello @userLogin.name ! <br />
+                Your email is @userLogin.email <br />               
+                Last login is @String.Format("{0:dd/MM/yyyy HH:mm:ss}",userLogin.lastlogindt) <br />
+                <a href="@Url.Action("Logout", "User")" class="btn  btn-primary">Logout</a>
+            </div>
+        </div>
+    </div>
+</div>

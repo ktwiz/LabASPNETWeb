@@ -13,6 +13,9 @@ namespace LabASPNETWeb
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            //! VEry importance to use ROUTE Annotation in COntroller
+            routes.MapMvcAttributeRoutes();
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

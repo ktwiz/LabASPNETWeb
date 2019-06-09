@@ -18,7 +18,7 @@
     <div class="card-body">
         <h2 class="card-title">@n.title</h2>
         <p class="card-text">@n.shortdesc</p>
-        <a href="#" class="btn btn-primary">Read More &rarr;</a>
+        <a href="@Url.Action("Detail","Home",new { @id = n.id })" class="btn btn-primary">Read More &rarr;</a>
     </div>
     <div class="card-footer text-muted">
         Posted on @String.Format("{0:dd/MM/yyyy HH:mm:ss}",n.createdt) by

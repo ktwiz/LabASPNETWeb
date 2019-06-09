@@ -30,7 +30,7 @@ namespace LabASPNETWeb.DataRepository.Linq
             {
                 AppStoreData.APP_LOGGER.Error(typeof(LinqNewsRep));
                 AppStoreData.APP_LOGGER.Error(ex);
-                return AppStoreData.EMPTY_NEWS;
+                return AppStoreData.EMPTY_NEWSS;
             }
         }
 
@@ -44,7 +44,7 @@ namespace LabASPNETWeb.DataRepository.Linq
             {
                 AppStoreData.APP_LOGGER.Error(typeof(LinqNewsRep));
                 AppStoreData.APP_LOGGER.Error(ex);
-                return AppStoreData.EMPTY_NEWS;
+                return AppStoreData.EMPTY_NEWSS;
             }
         }
 
@@ -58,7 +58,7 @@ namespace LabASPNETWeb.DataRepository.Linq
             {
                 AppStoreData.APP_LOGGER.Error(typeof(LinqNewsRep));
                 AppStoreData.APP_LOGGER.Error(ex);
-                return AppStoreData.EMPTY_NEWS;
+                return AppStoreData.EMPTY_NEWSS;
             }
         }
 

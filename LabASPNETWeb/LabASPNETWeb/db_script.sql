@@ -15,7 +15,7 @@ CREATE TABLE dbo.wpUsers (
   lastupddt datetime NULL,
   activeyn bit DEFAULT 1 NULL,
   lastlogindt datetime NULL,
-  pwd varchar(255) NULL,
+  pwd varchar(max) NULL,
   PRIMARY KEY CLUSTERED (username),
   UNIQUE (email)
 )
