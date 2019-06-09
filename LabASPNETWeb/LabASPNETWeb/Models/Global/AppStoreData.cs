@@ -1,4 +1,5 @@
-﻿using log4net;
+﻿using LabASPNETWeb.DataRepository.Linq;
+using log4net;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,8 @@ namespace LabASPNETWeb.Models.Global
 
         //! Log4net
         public static ILog APP_LOGGER;
+
+        public static wpNew NULL_NEWS = new wpNew { id = -1 };
 
 
         public class PAR

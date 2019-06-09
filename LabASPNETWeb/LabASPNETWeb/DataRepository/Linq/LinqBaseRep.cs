@@ -12,13 +12,18 @@ namespace LabASPNETWeb.DataRepository.Linq
         protected DBDataContext _context;        
         protected ConnectionState _status_cd;
 
+        public LinqBaseRep()
+        {
+
+        }        
+
         private int doConnect(string conn_string)
         {
             try
             {
                 this._context = new DBDataContext(AppStoreData.CONN_STR);
                 this._status_cd = this._context.Connection.State;
-                if (this._status_cd.Equals(ConnectionState.Open))
+                if (this._status_cd.Equals(ConnectionState.Open) || this._status_cd.Equals(ConnectionState.Closed))
                     return 1;
 
                 //? Not handle if connect is still broken or be closed
