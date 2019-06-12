@@ -2,11 +2,15 @@
 
 class App {
     constructor () {
-        this._state = State.state;       
+        this._state = State.state;
     }
-    
+
     render () {       
-        return `Hello World ! Is Logged is ${this._state['is_loggedin']}`;
+        const appState = State.getState();
+        const {active_page} = appState;       
+        const pageClass = appState.pages[active_page];
+
+        return pageClass.renderPage();
     }
 }
 

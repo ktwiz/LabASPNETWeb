@@ -1,8 +1,23 @@
-﻿let state = 
+﻿import Home from './Pages/Home.js';
+import DetailNews from './Pages/DetailNews.js';
+
+let state = 
 {
     is_loggedin: false,
-    pages: ["Home", "About"],
-}
+    active_page: "home",
+    pages: 
+        {
+            'home' : Home,
+            'detailnews' : DetailNews
+        }
+    ,
+    newss: [
+        {title: "1", shortdesc: "acb", createdt: "01/01/2019", usr_create: "TuanDH", username : "Duong Hong Tuan", content: "Noi dung 1" },
+        {title: "2", shortdesc: "acb2", createdt: "02/01/2019", usr_create: "TuanDH", username : "Duong Hong Tuan", content: "Noi dung 2" },
+    ]
+};
+
+const titlepage = 'Tuan Website';
 
 const historyState = [{ ...state, _time: new Date() }];
 
@@ -34,5 +49,6 @@ export default {
     state,
     getState,
     setState,
-    subcribe
+    subcribe,
+    titlepage
 };
